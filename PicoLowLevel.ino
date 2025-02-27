@@ -300,8 +300,8 @@ void loop() {
 
   display.showLogo();
   Debug.println("showLogo \n", Levels::INFO);
-  delay(1000);
+  delay(10000);
   display.showBattery();
-  delay(1000);
+  delay(10000);
 
 };
