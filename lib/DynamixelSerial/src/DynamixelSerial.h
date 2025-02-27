@@ -76,20 +76,20 @@ private:
 	byte id;
 public:
 	DynamixelMotor(byte id) : id(id) {}
-	
+
 	int reset();
-	int ping(); 
-	
+	int ping();
+
 	int setID(byte newID);
 	int setBD(long baud);
-	
+
 	int move(int Position);
 	int moveSpeed(int Position, int Speed);
 	int setEndless(bool Status);
 	int turn(bool SIDE, int Speed);
-	
+
 	void action(void);
-	
+
 	int setTempLimit(byte Temperature);
 	int setAngleLimit(int CWLimit, int CCWLimit);
 	int setVoltageLimit(byte DVoltage, byte UVoltage);
@@ -101,17 +101,17 @@ public:
 	int setCMargin(byte CWCMargin, byte CCWCMargin);
 	int setCSlope(byte CWCSlope, byte CCWCSlope);
 	int setPunch(int Punch);
-	
+
 	int moving();
 	int lockRegister();
 	int RWStatus();
-	
+
 	int readTemperature();
 	int readVoltage();
 	int readPosition();
 	int readSpeed();
 	int readLoad();
-	
+
 	int enableTorque(bool Status);
 	int enableLED(bool Status);
 };

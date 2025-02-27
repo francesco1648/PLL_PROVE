@@ -2,7 +2,7 @@
 #ifndef inclusion_h
 #define inclusion_h
 
-#define "AbsoluteEncoder.h" "lib/AbsoluteEncoder/src/AbsoluteEncoder.h"
+
 
 #include "lib/SmartMotor/src/SmartMotor.cpp"
 

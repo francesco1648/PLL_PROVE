@@ -2,7 +2,7 @@
 #define DEBUG_H
 
 #include <Arduino.h>
-#include "Debug.h"
+
 
 enum class Levels{
   OFF, WARN, INFO, DEBUG
@@ -10,7 +10,7 @@ enum class Levels{
 
 /**
  * Debug class that allows a finer control over serial debug.
- * 
+ *
  * Any message can have a level given by the #Levels enum.
  * Only messages with level lower than the one set by using setLevel(Levels lvl) are printed.
  * The level is also written before the message in the serial output so even when all levels
@@ -19,7 +19,7 @@ enum class Levels{
 class SerialDebug {
 public:
   SerialDebug(HardwareSerial* serial = &Serial) : serial(serial), ended(true), level(Levels::DEBUG) {}
-  
+
   void print(String st, Levels level);
   void println(String st, Levels level);
   void print(String st);

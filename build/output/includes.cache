@@ -10,52 +10,102 @@
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\variants\\rpipico"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "Wire.h",
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\Wire\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "SPI.h",
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\SPI\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "AbsoluteEncoder.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\AbsoluteEncoder\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "Battery.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Battery\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "DynamixelSerial.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\DynamixelSerial\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "TractionEncoder.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\TractionEncoder\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "Debug.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Debug\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "mcp2515.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Can\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "Display.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Display\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "Adafruit_GFX.h",
     "Includepath": "C:\\Users\\Titania\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "Adafruit_I2CDevice.h",
     "Includepath": "C:\\Users\\Titania\\Documents\\Arduino\\libraries\\Adafruit_BusIO"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "Adafruit_SH110X.h",
     "Includepath": "C:\\Users\\Titania\\Documents\\Arduino\\libraries\\Adafruit_SH110X"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "WiFi.h",
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\WiFi\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "LwipIntfDev.h",
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\lwIP_Ethernet\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "Updater.h",
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\Updater\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "MD5Builder.h",
     "Includepath": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\MD5Builder\\src"
   },
   {
-    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\sketch\\PicoLowLevel.ino.cpp",
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "SmartMotor.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\SmartMotor\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "Motor.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Motor\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
+    "Include": "PID.h",
+    "Includepath": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\PID\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\build\\output\\sketch\\PicoLowLevel.ino.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -66,6 +116,46 @@
   },
   {
     "Sourcefile": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\SPI\\src\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\AbsoluteEncoder\\src\\AbsoluteEncoder.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\AbsoluteEncoder\\src\\ams_as5048b.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Battery\\src\\Battery.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\DynamixelSerial\\src\\DynamixelSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\TractionEncoder\\src\\TractionEncoder.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Debug\\src\\Debug.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Can\\src\\mcp2515.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Display\\src\\Display.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -211,6 +301,21 @@
   },
   {
     "Sourcefile": "C:\\Users\\Titania\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\4.4.4\\libraries\\MD5Builder\\src\\MD5Builder.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\SmartMotor\\src\\SmartMotor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Motor\\src\\Motor.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\PID\\src\\PID.cpp",
     "Include": "",
     "Includepath": null
   },

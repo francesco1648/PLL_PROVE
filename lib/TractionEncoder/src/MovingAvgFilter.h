@@ -1,7 +1,6 @@
 #ifndef MOVING_AVG_FILTER_H
 #define MOVING_AVG_FILTER_H
-#include <Arduino.h>
-#include "Filter.h"
+
 
 /**
  * Class for a moving average filter implementing the Filter interface.

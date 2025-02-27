@@ -52,7 +52,7 @@
 #include <Wire.h>
 
 // custom debug class
-#include "../../Debug/Debug.h"
+#include "../../Debug/src/Debug.h"
 
 
 #ifndef _AMS_AS5048B_H_

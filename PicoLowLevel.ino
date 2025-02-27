@@ -2,28 +2,25 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
-#include "inclusion.h"
-#include "lib/AbsoluteEncoder/src/AbsoluteEncoder.h"
-#include "lib/Battery/src/Battery.h"
+#include "AbsoluteEncoder.h"
+#include "Battery.h"
+#include "DynamixelSerial.h"
+#include "TractionEncoder.h"
+#include "MovingAvgFilter.h"
+#include "ExpSmoothingFilter.h"
+#include "Debug.h"
+#include "mcp2515.h"
+#include "Display.h"
+#include "SmartMotor.h"
+#include "Motor.h"
+#include "PID.h"
 
-#include "lib/DynamixelSerial/src/DynamixelSerial.h"
-#include "lib/TractionEncoder/src/TractionEncoder.h"
-#include "lib/TractionEncoder/src/MovingAvgFilter.h"
 
-#include "lib/TractionEncoder/src/ExpSmoothingFilter.h"
-
-
-#include "lib/Debug/src/Debug.h"
-#include "lib/Can/src/mcp2515.h"
-#include "lib/Display/src/Display.h"
-#include "include/communication.h"
 #include "include/definitions.h"
 #include "include/mod_config.h"
+#include "include/communication.h"
 
 
-#include "lib/SmartMotor/src/SmartMotor.h"
-#include "lib/Motor/src/Motor.h"
-#include "lib/PID/src/PID.h"
 
 
 //#include "WebManagement.h"
@@ -176,8 +173,8 @@ void setup() {
   motorTrLeft.begin();
   motorTrRight.begin();
 
-  motorTrLeft.calibrate();
-  motorTrRight.calibrate();
+  //motorTrLeft.calibrate();
+ // motorTrRight.calibrate();
 
 #if defined MODC_PITCH || defined MODC_EE
   Serial1.setRX(1);
@@ -302,7 +299,7 @@ void loop() {
   //display.handleGUI();
 
   display.showLogo();
-  Debug.println("showLogo", Levels::INFO);
+  Debug.println("showLogo \n", Levels::INFO);
   delay(1000);
   display.showBattery();
   delay(1000);
