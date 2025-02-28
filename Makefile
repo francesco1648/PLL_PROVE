@@ -5,6 +5,8 @@ SKETCH_NAME = $(notdir $(SKETCH_PATH))
 BOARD_FQBN = rp2040:rp2040:rpipico
 OUTPUT_DIR = $(CURDIR)/build/output
 
+FQBN?=$(BOARD)
+
 # Rilevamento del sistema operativo
 ifeq ($(OS),)
   UNAME_S := $(shell uname -s)
@@ -89,7 +91,7 @@ endif
 
 # pulizia cartella di build
 clean:
-	$(call GREEN, "🧹 Pulizia in corso...")
+	$(call GREEN, "Pulizia in corso...")
 
 ifeq ($(OS), Windows_NT)
 	@if exist "$(CLEAN_DIR)" rmdir /s /q "$(CLEAN_DIR)"
