@@ -1,4 +1,4 @@
-# 📌 Impostazioni di base
+#  Impostazioni di base
 SKETCH_PATH = $(CURDIR)
 SKETCH_NAME = $(notdir $(SKETCH_PATH))
 
@@ -28,9 +28,14 @@ define print_red
 	@powershell -Command "Write-Host '$1' -ForegroundColor Red"
 endef
 
-PORT = COM12
+PORT ?= $(shell arduino-cli board list | findstr "Raspberry Pi Pico" | for /f "tokens=1" %%a in ('more') do @echo %%a)
 
-# 🛠️ Compilazione
+.DEFAULT:
+	@echo "Comando non valido: '$@'"
+	@echo "Usa 'make help' per vedere l'elenco dei comandi disponibili."
+	@$(MAKE) help
+
+#  Compilazione
 compile: clean_all
 	$(call print_green, $(COMPILATION_SYMBOL))
 	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(BUILD_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
@@ -39,17 +44,26 @@ compile: clean_all
 compile_fast:
 	@arduino-cli compile --fqbn $(BOARD_FQBN) "$(SKETCH_PATH)"
 
-# 🚀 Upload del file .bin
+#  Upload del file .bin
 upload:
-	@echo "Uploading .bin file to Raspberry Pi Pico..."
-	@arduino-cli upload -p $(PORT) --fqbn $(BOARD_FQBN) --input-dir $(OUTPUT_DIR) $(SKETCH_NAME).ino.bin
+	@echo "Controllare di aver inserito la porta COM corretta. La porta COM attuale e': $(PORT)"
+	@if exist "$(OUTPUT_DIR)/$(SKETCH_NAME).ino.bin" ( \
+		echo "Uploading .bin file to Raspberry Pi Pico..." & \
+		arduino-cli upload -p $(PORT) --fqbn $(BOARD_FQBN) --input-dir $(OUTPUT_DIR) $(SKETCH_NAME).ino.bin \
+	) else ( \
+		echo " File .bin non trovato. Eseguire 'make compile' prima di caricare il codice." \
+	)
 
-# 🚀 Upload del file .uf2 in modalità BOOTSEL
+# Upload del file .uf2 in modalità BOOTSEL
 upload_bootsel:
-	@echo "Uploading .uf2 file to Raspberry Pi Pico..."
-	@powershell -Command "Copy-Item '$(OUTPUT_DIR)/$(SKETCH_NAME).ino.uf2' -Destination 'E:\' -Force"
+	@if exist "$(OUTPUT_DIR)/$(SKETCH_NAME).ino.uf2" ( \
+		echo "Uploading .uf2 file to Raspberry Pi Pico..." & \
+		powershell -Command "Copy-Item '$(OUTPUT_DIR)/$(SKETCH_NAME).ino.uf2' -Destination 'E:\' -Force" \
+	) else ( \
+		echo " File .uf2 non trovato. Eseguire 'make compile' prima di caricare il codice." \
+	)
 
-# 🧹 Pulizia della cartella di build
+#  Pulizia della cartella di build
 clean_all:
 	@echo BUILD_DIR è: "$(BUILD_DIR)"
 	@if exist "$(BUILD_DIR)\output" ( \
@@ -75,11 +89,11 @@ clean_output:
 
 
 
-# 📡 Monitor seriale
+#  Monitor seriale
 monitor:
 	arduino-cli monitor -p $(PORT) -c baudrate=115200
 
-# 📚 Guida ai comandi
+#  Guida ai comandi
 help:
 	@echo "Comandi disponibili:"
 	@echo "  make compile       - Compila il progetto"
@@ -92,11 +106,11 @@ help:
 	@echo "  make help          - Mostra questa guida"
 	@echo "  make auto_com_port - Rileva automaticamente la porta COM del Raspberry Pi Pico"
 
-# 🔍 Stampa la porta COM rilevata
+#  Stampa la porta COM rilevata
 auto_com_port:
 	@echo "La porta COM rilevata automaticamente è: $(PORT)"
 
-# 🔍 Elenca tutte le porte COM disponibili
+#  Elenca tutte le porte COM disponibili
 port:
 	@echo "Elenco delle porte COM rilevate dal sistema:"
 	@arduino-cli board list

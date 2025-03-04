@@ -1,35 +1,57 @@
 # PicoLowLevel
 
-This is the code running on the board inside each module of Rese.Q.
+This is the code running on the board inside each module of **Rese.Q**.
 
-## Module components
+## 📦 Module Components
 
-The components inside each modules are:
+Each module includes the following components:
 
-- Raspberry Pi Pico W
-- CAN transceiver, with MCP2515 and TJA1050
-- Two  DC motors
-  - controlled by Pololu G2 24v13 drivers
-  - rotary encoder with 48 pulses per motor rotation
-  - 150:1 gearbox
-- One to three Dynamixel AX-12A smart servo motors
-- AMS AS5048B absolute encoder
-- 64*128 OLED display with SH1106 driver
+- **Raspberry Pi Pico W**
+- **CAN transceiver**, with **MCP2515** and **TJA1050**
+- **Two DC motors**, featuring:
+  - **Pololu G2 24v13** driver
+  - **Rotary encoder** with **48 pulses per motor rotation**
+  - **150:1 gearbox**
+- **One to three Dynamixel AX-12A smart servo motors**
+- **AMS AS5048B absolute encoder**
+- **64×128 OLED display**, with **SH1106 driver**
 
-## Building
+---
 
-To build the project you need a working Arduino environment. This can be either the official Arduino IDE, VSCode with the [Arduino extension](https://github.com/microsoft/vscode-arduino), or even simply [arduino-cli](https://github.com/arduino/arduino-cli).
+## 🛠️ Building the Project
 
-### Arduino-Pico
+To build the project, you need a working Arduino environment. You can use:
 
-This project is based on the Arduino framework, and in particular uses the Raspberry Pi Pico available [here](https://github.com/earlephilhower/arduino-pico). The guide on how to install the core can be found in the repository's README.
+- The **official Arduino IDE**
+- **VSCode**, with the [Arduino extension](https://github.com/microsoft/vscode-arduino)
+- Or simply **[arduino-cli](https://github.com/arduino/arduino-cli)**
 
-### Libraries
+### 📌 Arduino-Pico
 
-Currently the only external library we are using is the `Adafruit SH110X` library, used to control the display. It can be found in Arduino's library manager.
+This project is based on the Arduino framework and specifically uses the **Raspberry Pi Pico core**, available [here](https://github.com/earlephilhower/arduino-pico). You can follow the installation guide in the repository's README.
 
-### Build options
+### 📚 Required Libraries
 
-In the Arduino IDE the Raspberry Pi Pico W board should be selected, and the flash size should be set to `2MB (Sketch: 1MB, FS: 1MB)`, meaning that half of the microcontroller memory will be dedicated to the program itself, while the other half can be used for storing informations and performing over-the-air (OTA) upgrades.
+Currently, the only external library used is:
 
-#roba da installare attraverso i comandi
+- `Adafruit SH110X` → for controlling the OLED display
+
+It can be installed via the Arduino Library Manager.
+
+### ⚙️ Build Options
+
+In the **Arduino IDE**, select:
+
+- **Board:** Raspberry Pi Pico W
+- **Flash Size:** `2MB (Sketch: 1MB, FS: 1MB)`
+  - **1MB** for the program code
+  - **1MB** for data storage and OTA updates
+
+---
+
+## ⚠️ Before Using the Makefile
+
+🔹 **Before executing any Makefile command, ensure you have installed `arduino-cli`.**
+
+You can download and install it from [here](https://github.com/arduino/arduino-cli).
+
