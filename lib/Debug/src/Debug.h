@@ -5,7 +5,7 @@
 
 
 enum class Levels{
-  OFF, WARN, INFO, DEBUG
+  OFF, WARN, INFO,ERROR,  DEBUG
 };
 
 /**

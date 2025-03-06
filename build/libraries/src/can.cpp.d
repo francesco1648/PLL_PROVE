@@ -1,5 +1,6 @@
-C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\PicoLowLevel.ino.cpp.o: \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\PicoLowLevel.ino.cpp \
+C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\libraries\src\can.cpp.o: \
+ C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Can\src\can.cpp \
+ C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Can\src\can.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Arduino.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/stdlib_noniso.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/RP2040Version.h \
@@ -132,12 +133,7 @@ C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\PicoL
  C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Bootsel.h \
  C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\Wire\src/Wire.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/HardwareI2C.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/ArduinoCore-API/api/HardwareI2C.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
+ C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Can\src\mcp2515.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\SPI\src/SPI.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/HardwareSPI.h \
  C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/ArduinoCore-API/api/HardwareSPI.h \
@@ -146,114 +142,4 @@ C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\PicoL
  C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
  C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\SPI\src/SPIHelper.h \
  C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\AbsoluteEncoder\src/AbsoluteEncoder.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/lib/Debug/src/Debug.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/definitions.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/mod_config.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\AbsoluteEncoder\src/ams_as5048b.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Battery\src/Battery.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/lib/Debug/src/Debug.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/definitions.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\DynamixelSerial\src/DynamixelSerial.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/HardwareSerial.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\TractionEncoder\src/TractionEncoder.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\TractionEncoder\src/Filter.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/definitions.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/quadrature_encoder.pio.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\TractionEncoder\src/MovingAvgFilter.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\TractionEncoder\src/ExpSmoothingFilter.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Debug\src/Debug.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Can\src/mcp2515.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Can\src/can.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Display\src/Display.h \
- C:\Users\Titania\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Print.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/Print.h \
- C:\Users\Titania\Documents\Arduino\libraries\Adafruit_GFX_Library/gfxfont.h \
- C:\Users\Titania\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_I2CDevice.h \
- C:\Users\Titania\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_SPIDevice.h \
- C:\Users\Titania\Documents\Arduino\libraries\Adafruit_SH110X/Adafruit_SH110X.h \
- C:\Users\Titania\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_GrayOLED.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFi.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/wl_definitions.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/wl_types.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiClass.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/utility/lwIP_nodriver.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\lwIP_Ethernet\src/LwipIntfDev.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/netif/ethernet.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/pbuf.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/err.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/netif.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/stats.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/mem.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/memp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/priv/memp_std.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/priv/memp_priv.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/priv/mem_priv.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/ethernet.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/ieee.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/etharp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/ip4.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/ip4.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/etharp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/ethip6.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/dhcp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/udp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/ip.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/ip6.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/ip.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/udp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/dhcp6.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/dns.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/raw.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/icmp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/icmp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/timeouts.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/inet_chksum.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/apps/sntp.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/apps/sntp_opts.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/pico-sdk/lib/lwip/src/include/lwip/prot/iana.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\lwIP_Ethernet\src/LwipIntf.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/IPAddress.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/IPAddress.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\lwIP_Ethernet\src/LwipEthernet.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/utility/nodriver.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/dhcpserver/dhcpserver.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiClient.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Client.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/Client.h \
- C:/Users/Titania/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.4.4/ArduinoCore-API/api/Client.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/include/slist.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiServer.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Server.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/Server.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiClientSecure.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiClientSecureBearSSL.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/BearSSLHelpers.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\Updater\src/Updater.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\MD5Builder\src/MD5Builder.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Stream.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/Stream.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/FS.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/StackThunk.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/CertStoreBearSSL.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiServerSecure.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiServerSecureBearSSL.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiUdp.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/Udp.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\cores\rp2040/api/Udp.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/include/slist.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiMulti.h \
- C:\Users\Titania\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.4.4\libraries\WiFi\src/WiFiNTP.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/definitions.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/bitmap_logos.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/mod_config.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/lib/Battery/src/Battery.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\SmartMotor\src/SmartMotor.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Motor\src/Motor.h \
- C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/definitions.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\PID\src/PID.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\lib\Can\src/can.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\include/definitions.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\include/mod_config.h \
- C:\Users\Titania\Desktop\isaac\picolowlevel_x_vs\PicoLowLevel\build\sketch\include/communication.h
+ C:/Users/Titania/Desktop/isaac/picolowlevel_x_vs/PicoLowLevel/include/mod_config.h

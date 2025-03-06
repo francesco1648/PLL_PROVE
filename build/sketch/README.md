@@ -33,3 +33,4 @@ Currently the only external library we are using is the `Adafruit SH110X` librar
 
 In the Arduino IDE the Raspberry Pi Pico W board should be selected, and the flash size should be set to `2MB (Sketch: 1MB, FS: 1MB)`, meaning that half of the microcontroller memory will be dedicated to the program itself, while the other half can be used for storing informations and performing over-the-air (OTA) upgrades.
 
+#roba da installare attraverso i comandi

@@ -37,12 +37,16 @@ PORT ?= $(shell arduino-cli board list | findstr "Raspberry Pi Pico" | for /f "t
 
 # Compilation
 compile: clean_all
-	$(call print_green, $(COMPILATION_SYMBOL))
+	$(call print_green, "-------------------------"$(COMPILATION_SYMBOL)"-------------------------")
+
 	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(BUILD_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
 		$(foreach dir, $(INCLUDE_PATHS), --build-property "compiler.cpp.extra_flags=-I$(dir)")
 
+
 compile_fast:
-	@arduino-cli compile --fqbn $(BOARD_FQBN) "$(SKETCH_PATH)"
+	$(call print_green, $(COMPILATION_SYMBOL))
+	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(BUILD_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
+		$(foreach dir, $(INCLUDE_PATHS), --build-property "compiler.cpp.extra_flags=-I$(dir)")
 
 # Upload .bin file
 upload:
@@ -66,12 +70,11 @@ upload_bootsel:
 # Clean the build folder
 clean_all:
 	@echo BUILD_DIR is: "$(BUILD_DIR)"
-	@if exist "$(BUILD_DIR)\output" ( \
-		echo The build folder exists. & \
+	@if exist "$(BUILD_DIR)" ( \
 		rd /s /q "$(BUILD_DIR)" & \
-		echo Build folder content removed. \
+		echo ----------------------Build folder content removed-------------------------- \
 	) else ( \
-		echo The output folder does not exist. \
+		echo ----------------------The output folder does not exist----------------------- \
 	)
 
 

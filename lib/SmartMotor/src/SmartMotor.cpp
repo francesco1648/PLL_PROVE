@@ -77,16 +77,32 @@ void SmartMotor::stop() {
  * Only the Kp and Ki gains are computed while the Kd gain is set to 0 since it doesn't have a positive effect on controlling the motor.
  * @param target Target speed to use for calibration.
  */
-void SmartMotor::calibrate(float target) {
+int SmartMotor::calibrate(float target) {
     float th = target + 5.f;
     float tl = target - 5.f;
-
+    float current_time = millis();
     motor.write(PWM_MAX_VALUE);
-    while(getSpeed() < th) delay(DT_ENC);
+    while(getSpeed() < th && millis() - current_time < MAX_CALIBRATION_TIME) {
+
+        delay(DT_ENC);
+    }
+
+    if (millis() - current_time >= MAX_CALIBRATION_TIME) {
+        Debug.println("Motor calibration failed: could not reach target speed", Levels::ERROR);
+        return -1;
+    }
     int t_high = millis();
     float val_high = getSpeed();
+
     motor.write(0);
-    while(getSpeed() > tl) delay(DT_ENC);
+    current_time = millis();
+    while(getSpeed() > tl && millis() - current_time < MAX_CALIBRATION_TIME ){
+         delay(DT_ENC);
+    }
+    if (millis() - current_time >= MAX_CALIBRATION_TIME) {
+        Debug.println("Motor calibration failed: could not reach target speed", Levels::ERROR);
+        return -2;
+    }
     int t_low = millis();
     float val_low = getSpeed();
 
@@ -103,6 +119,7 @@ void SmartMotor::calibrate(float target) {
 
     pid.setKp(kp);
     pid.setKi(ki);
+    return 0;
 }
 
 /**

@@ -150,6 +150,11 @@
     "Includepath": null
   },
   {
+    "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Can\\src\\can.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
     "Sourcefile": "C:\\Users\\Titania\\Desktop\\isaac\\picolowlevel_x_vs\\PicoLowLevel\\lib\\Can\\src\\mcp2515.cpp",
     "Include": "",
     "Includepath": null

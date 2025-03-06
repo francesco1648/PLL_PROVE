@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include <Arduino.h>
 
+
 typedef unsigned char __u8;
 typedef unsigned short __u16;
 typedef unsigned long __u32;
@@ -42,5 +43,9 @@ struct can_frame {
     __u8    can_dlc; /* frame payload length in byte (0 .. CAN_MAX_DLEN) */
     __u8    data[CAN_MAX_DLEN] __attribute__((aligned(8)));
 };
+
+
+
+void initCAN();
 
 #endif /* CAN_H_ */

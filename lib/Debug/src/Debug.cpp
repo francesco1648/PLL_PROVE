@@ -1,7 +1,7 @@
 #include "Debug.h"
 
 /**
- * Sends a string to the Serial port with a debug level, only if it is lower than the setted one. 
+ * Sends a string to the Serial port with a debug level, only if it is lower than the setted one.
  * The debug level will be sent only if it's a new line.
  * @param st String to print.
  * @param level Debug level.
@@ -17,7 +17,7 @@ void SerialDebug::print(String st, Levels level) {
 }
 
 /**
- * Sends a line to the serial port with a debug level, only if it is lower than the setted one. 
+ * Sends a line to the serial port with a debug level, only if it is lower than the setted one.
  * The debug level will be sent only if it's a new line.
  * @param st String to print.
  * @param level Debug level.
@@ -68,7 +68,9 @@ void SerialDebug::setLevel(Levels level) {
 String SerialDebug::getLevel(Levels level) {
   switch (level) {
     case Levels::DEBUG: return "debug ";
+    case Levels::ERROR: return "error ";
     case Levels::INFO: return "information ";
+
     case Levels::WARN: return "warning ";
     default: return "";
   }

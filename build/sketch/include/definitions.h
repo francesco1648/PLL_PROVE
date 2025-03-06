@@ -34,6 +34,7 @@
 
 // Motor configuration
 #define MAX_SPEED 65.f
+#define MAX_CALIBRATION_TIME 5000
 
 // Encoder pins
 #define ENC_TR_LEFT_A   12
