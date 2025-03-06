@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/PicoLowLevel.ino.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "RP2040",
+            "runToMain": true,
+            "configFiles": ["interface/cmsis-dap.cfg", "target/rp2040.cfg"],
+            "searchDir": ["C:\\Users\\Titania\\Desktop\\isaac\\debug_pico\\a\\open_ocd\\openocd\\scripts"],
+            "svdFile": "C:/Program Files/Raspberry_Pi/pico-sdk/src/rp2040/hardware_regs/rp2040.svd",
+
+            "setupCommands": [
+                { "text": "adapter speed 2000" },
+                { "text": "transport select swd" },
+                { "text": "init" },
+                { "text": "reset init" },
+                { "text": "arm semihosting enable" },
+                { "text": "monitor reset init" },
+                { "text": "monitor reset halt" },
+                { "text": "monitor halt" }
+                { "text": "monitor reset halt" },
+                { "text": "monitor halt" }
+            ]
+        }
+    ]
+}
