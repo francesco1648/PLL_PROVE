@@ -5,8 +5,6 @@ SKETCH_NAME = $(notdir $(SKETCH_PATH))
 BOARD_FQBN = rp2040:rp2040:rpipico
 OUTPUT_DIR = $(CURDIR)/build/output
 
-FQBN?=$(BOARD)
-
 # Rilevamento del sistema operativo
 ifeq ($(OS),)
   UNAME_S := $(shell uname -s)
@@ -36,8 +34,8 @@ ifeq ($(OS), Windows_NT)
     RM = rmdir /s /q
     COPY = powershell -Command "Copy-Item"
     FIND_PORT = powershell -Command "& {arduino-cli board list | Select-String -Pattern 'Pico' | ForEach-Object {($_ -split '\\s+')[0]}}"
-    GREEN = powershell -Command "Write-Host '$1' -ForegroundColor Green"
-    RED = powershell -Command "Write-Host '$1' -ForegroundColor Red"
+    GREEN = @powershell -Command "Write-Host '$1' -ForegroundColor Green"
+    RED = @powershell -Command "Write-Host '$1' -ForegroundColor Red"
 else
     RM = rm -rf
     COPY = cp
@@ -47,18 +45,16 @@ else
 endif
 
 # 🔌 Rilevamento automatico della porta COM
-PORT = COM12
+PORT ?= $(shell arduino-cli board list | findstr "Raspberry Pi Pico" | for /f "tokens=1" %%a in ('more') do @echo %%a)
 
-define print_green
-	@powershell -Command "Write-Host '$1' -ForegroundColor Green"
-endef
+.DEFAULT:
+	@echo "Invalid command: '$@'"
+	@echo "Use 'make help' to see the list of available commands."
+	@$(MAKE) help
 
-define print_red
-	@powershell -Command "Write-Host '$1' -ForegroundColor Red"
-endef
 
 # 🛠️ Compilazione
-compile:
+compile: clean_all
 	$(call GREEN, " Compilazione in corso...")
 
 ifeq ($(OS), Windows_NT)
@@ -69,6 +65,34 @@ endif
 
 	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(OUTPUT_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
 		$(foreach dir, $(INCLUDE_PATHS), --build-property "compiler.cpp.extra_flags=-I$(dir)")
+	# Nome atteso del file di output (può variare)
+	TARGET_FILE="$(OUTPUT_DIR)/$(SKETCH_NAME).ino.elf"
+	@set SIZE_OLD=0
+	@set MAX_SIZE=500000  # Dimensione stimata del file finale (in byte)
+
+	@echo -n "[                    ] 0% \r"
+
+	:check_progress
+	@ping -n 1 -w 500 127.0.0.1 >nul 2>&1  # Attendi 0.5s (Windows)
+	@if exist "$(TARGET_FILE)" ( \
+		for %%F in ("$(TARGET_FILE)") do set SIZE_NEW=%%~zF & \
+		set /A PROGRESS=(SIZE_NEW * 20) / MAX_SIZE & \
+		call :print_bar !PROGRESS! \
+	)
+	@if exist .compile_pid ( \
+		goto check_progress \
+	)
+
+	# Attendi la fine della compilazione
+	@wait $$(cat .compile_pid) && rm .compile_pid
+	$(call print_green, "Compilazione completata con successo!")
+
+:print_bar
+	@set BAR=[####################]
+	@set SPACE=[                    ]
+	@set BAR=!BAR:~0,%1!
+	@set SPACE=!SPACE:~%1,20!
+	@echo -n "!BAR!!SPACE! %1% \r"
 
 	$(call GREEN, " Compilazione completata con successo!")
 
@@ -90,8 +114,8 @@ else
 endif
 
 # pulizia cartella di build
-clean:
-	$(call GREEN, "Pulizia in corso...")
+clean_all:
+	@echo "-----------------------------------Pulizia in corso------------------------------------------"
 
 ifeq ($(OS), Windows_NT)
 	@if exist "$(CLEAN_DIR)" rmdir /s /q "$(CLEAN_DIR)"
@@ -99,15 +123,15 @@ else
 	@rm -rf "$(CLEAN_DIR)"
 endif
 
-	$(call GREEN, "🧼 Cartella di build pulita!")
+	$(call GREEN, "-----------------------------------Cartella di build pulita!---------------------------------")
 
-# 📡 Monitor seriale
+#  Monitor seriale
 monitor:
-	@echo "📡 Connessione al monitor seriale sulla porta $(PORT)..."
+	@echo " Connessione al monitor seriale sulla porta $(PORT)..."
 	@arduino-cli monitor -p $(PORT) -c baudrate=115200
 
 # 🔄 Compilazione + Upload in un solo passaggio
-all: clean compile upload
+all: clean_all compile upload
 
 # ℹ️ Guida ai comandi disponibili
 help:
@@ -120,14 +144,14 @@ help:
 	@echo "  make all           -  Compila e carica il progetto in un solo passaggio"
 	@echo "  make clean         -  Pulisce i file di compilazione"
 	@echo "  make help          -  Mostra questa guida"
-	@echo "  make connected_com_port - Mostra la COM impostata per il Raspberry Pi Pico"
-	@echo "  make list_com_port - Elenca tutte le porte COM disponibili"
+	@echo "  make auto_com_port - Mostra la COM impostata per il Raspberry Pi Pico"
+	@echo "  make port - Elenca tutte le porte COM disponibili"
 
 # 🔍 Stampa la porta COM rilevata
-connected_com_port:
+auto_com_port:
 	@echo " La porta COM attualmente impostata è: $(PORT)"
 
 # 🔍 Elenca tutte le porte COM disponibili
-list_com_port:
+port:
 	@echo " Elenco delle porte COM rilevate:"
 	@arduino-cli board list
