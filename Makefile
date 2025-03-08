@@ -30,19 +30,25 @@ endef
 
 PORT ?= $(shell arduino-cli board list | findstr "Raspberry Pi Pico" | for /f "tokens=1" %%a in ('more') do @echo %%a)
 
-.DEFAULT:
-	@echo "Invalid command: '$@'"
-	@echo "Use 'make help' to see the list of available commands."
-	@$(MAKE) help
 
-# Compilation
+
+
+
+
+
+
+
+# Altre definizioni e target del Makefile...
+
+# Target di compilazione
 compile: clean_all
 	$(call print_green, "-------------------------"$(COMPILATION_SYMBOL)"-------------------------")
 
 	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(BUILD_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
 		$(foreach dir, $(INCLUDE_PATHS), --build-property "compiler.cpp.extra_flags=-I$(dir)")
+	$(call print_green, "Compilazione completata con successo!")
 
-
+# Fast compile (without progress bar)
 compile_fast:
 	$(call print_green, $(COMPILATION_SYMBOL))
 	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(BUILD_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
@@ -77,7 +83,6 @@ clean_all:
 		echo ----------------------The output folder does not exist----------------------- \
 	)
 
-
 clean_output:
 	@echo "Cleaning in progress..."
 	@if exist "$(BUILD_DIR)/output" ( \
@@ -88,9 +93,6 @@ clean_output:
 		echo "The output folder does not exist." \
 	)
 	$(call print_green, "Content of the output folder cleaned.")
-
-
-
 
 # Serial monitor
 monitor:
