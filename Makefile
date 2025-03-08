@@ -57,11 +57,14 @@ upload:
 # Upload .uf2 file in BOOTSEL mode
 upload_bootsel:
 	@if exist "$(OUTPUT_DIR)/$(SKETCH_NAME).ino.uf2" ( \
-		echo "Uploading .uf2 file to Raspberry Pi Pico..." & \
-		powershell -Command "Copy-Item '$(OUTPUT_DIR)/$(SKETCH_NAME).ino.uf2' -Destination 'E:\' -Force" \
+		echo "Uploading .uf2 file to Raspberry Pi Pico..." && \
+		powershell -Command "Copy-Item '$(OUTPUT_DIR)/$(SKETCH_NAME).ino.uf2' -Destination 'E:\' -Force" || ( \
+		    echo "Error while uploading, please make sure the pico is in BOOTSEL mode and is recognized as E:\ storage drive. If it is recognized as another drive, please change the 'Destination' field of the upload_bootsel command"; \
+		) \
 	) else ( \
-		echo " .uf2 file not found. Run 'make compile' before uploading the code." \
+		echo ".uf2 file not found. Run 'make compile' before uploading the code." \
 	)
+
 
 # Clean the build folder
 clean_all:
