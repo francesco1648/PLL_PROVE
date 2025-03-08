@@ -61,4 +61,4 @@ Before using the Makefile, ensure that you have installed the correct rp2040 cor
 arduino-cli core install rp2040:rp2040
 ```
 
-Additionally, to run the Makefile on Windows, you need to install MinGW-w64. MinGW-w64 provides a complete toolchain including the GNU Compiler Collection (GCC) and other essential tools for compiling code on Windows. You can download it from the official MinGW-w64 website[here](https://github.com/niXman/mingw-builds-binaries/releases).
+Additionally, to run the Makefile on Windows, you need to install MinGW-w64. MinGW-w64 provides a complete toolchain including the GNU Compiler Collection (GCC) and other essential tools for compiling code on Windows. You can download it from the official [ MinGW-w64 website](https://github.com/niXman/mingw-builds-binaries/releases).
